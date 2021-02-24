@@ -1,4 +1,4 @@
-package com.blogspot.soyamr.arview
+package com.blogspot.soyamr.arview.view.main
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData

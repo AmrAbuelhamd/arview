@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="com.blogspot.soyamr.arview.MainActivityViewModel" />
+            type="com.blogspot.soyamr.arview.view.main.MainActivityViewModel" />
 
 
     </data>
@@ -17,7 +17,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".view.main.MainActivity">
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -33,6 +33,17 @@
             android:id="@+id/here_must_be_id_or_no_databinding"
             layout="@layout/loading_state"
             android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

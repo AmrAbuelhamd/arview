@@ -1,16 +1,17 @@
-package com.blogspot.soyamr.arview
+package com.blogspot.soyamr.arview.view.main
 
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.blogspot.soyamr.arview.R
 import com.blogspot.soyamr.arview.model.domain.FinalGameInfo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
 
 
-class GameAdapter(private val games: ArrayList<FinalGameInfo>) :
+class GameRecyclerAdapter(private val games: ArrayList<FinalGameInfo>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     class ViewHolder(private val viewItem: View) :

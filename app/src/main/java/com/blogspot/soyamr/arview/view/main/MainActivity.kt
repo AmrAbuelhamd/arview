@@ -1,10 +1,13 @@
-package com.blogspot.soyamr.arview
+package com.blogspot.soyamr.arview.view.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.blogspot.soyamr.arview.R
+import com.blogspot.soyamr.arview.view.rating.RateUsActivity
 import com.blogspot.soyamr.arview.databinding.ActivityMainBinding
 import com.blogspot.soyamr.arview.model.domain.FinalGameInfo
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     var games = ArrayList<FinalGameInfo>()
 
-    lateinit var myAdapter: GameAdapter
+    lateinit var myAdapter: GameRecyclerAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,11 +38,24 @@ class MainActivity : AppCompatActivity() {
         setObservers()
 
         setupRecyclerView()
+
+        setListeners()
+    }
+
+    private fun setListeners() {
+        floatingActionButton.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    RateUsActivity::class.java
+                )
+            )
+        }
     }
 
     private fun setupRecyclerView() {
 
-        myAdapter = GameAdapter(games)
+        myAdapter = GameRecyclerAdapter(games)
 
         val myViewManager = LinearLayoutManager(this)
         val recyclerView = recyclerView.apply {
