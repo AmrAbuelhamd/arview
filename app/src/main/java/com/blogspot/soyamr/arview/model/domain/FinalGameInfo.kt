@@ -1,4 +1,4 @@
-package com.blogspot.soyamr.arview.model.net
+package com.blogspot.soyamr.arview.model.domain
 
 data class FinalGameInfo(
     val name: String,

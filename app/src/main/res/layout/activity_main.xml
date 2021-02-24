@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="com.blogspot.soyamr.arview.MainActivityViewModel" />
@@ -25,5 +28,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/here_must_be_id_or_no_databinding"
+            layout="@layout/loading_state"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

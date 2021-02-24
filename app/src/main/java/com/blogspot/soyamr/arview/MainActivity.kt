@@ -6,12 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.blogspot.soyamr.arview.databinding.ActivityMainBinding
-import com.blogspot.soyamr.arview.model.net.FinalGameInfo
-import com.blogspot.soyamr.notforgotagain.model.net.Network
+import com.blogspot.soyamr.arview.model.domain.FinalGameInfo
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.blogspot.soyamr.arview.model.net.FinalGameInfo
+import com.blogspot.soyamr.arview.model.domain.FinalGameInfo
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
 
